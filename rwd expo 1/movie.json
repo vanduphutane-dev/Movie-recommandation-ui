@@ -1,0 +1,81 @@
+{
+    "id": "m1",
+    "title": "Starlight Odyssey",
+    "year": 2020,
+    "genres": ["Sci-Fi", "Adventure"],
+    "description": "A crew of explorers travel across galaxies to uncover an ancient signal that could change humanity's fate.",
+    "poster": "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=300&q=60"
+  },
+  {
+    "id": "m2",
+    "title": "City of Echoes",
+    "year": 2018,
+    "genres": ["Drama", "Mystery"],
+    "description": "When a journalist uncovers a string of small disappearances, she discovers a city with many hidden layers.",
+    "poster": "https://images.unsplash.com/photo-1528747045269-390fe33c19d7?auto=format&fit=crop&w=300&q=60"
+  },
+  {
+    "id": "m3",
+    "title": "Laugh Track",
+    "year": 2021,
+    "genres": ["Comedy"],
+    "description": "An improvisational comedian navigates sudden fame and the absurdities of modern dating with outrageous sketches.",
+    "poster": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=300&q=60"
+  },
+  {
+    "id": "m4",
+    "title": "Deep Blue",
+    "year": 2019,
+    "genres": ["Documentary"],
+    "description": "An intimate look at the oceans and the delicate balance of marine ecosystems in the face of climate change.",
+    "poster": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=300&q=60"
+  },
+  {
+    "id": "m5",
+    "title": "Neon Samurai",
+    "year": 2022,
+    "genres": ["Action", "Sci-Fi"],
+    "description": "In a neon metropolis, a former enforcer becomes a blade-for-hire and fights high-tech corporations with ancient code.",
+    "poster": "https://images.unsplash.com/photo-1516910817561-5f0abf1d6a1b?auto=format&fit=crop&w=300&q=60"
+  },
+  {
+    "id": "m6",
+    "title": "Hidden Notes",
+    "year": 2017,
+    "genres": ["Romance", "Drama"],
+    "description": "Two musicians from different worlds connect through an old melody that brings up long-forgotten memories.",
+    "poster": "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=300&q=60"
+  },
+  {
+    "id": "m7",
+    "title": "The Last Algorithm",
+    "year": 2023,
+    "genres": ["Sci-Fi", "Thriller"],
+    "description": "When an experiment to optimize society goes awry, one scientist must decide whether to shut down the perfect but dangerous algorithm.",
+    "poster": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=300&q=60"
+  },
+  {
+    "id": "m8",
+    "title": "Campfire Tales",
+    "year": 2016,
+    "genres": ["Horror", "Mystery"],
+    "description": "A group of friends at a lakeside retreat tell stories that begin to come true under the moonlight.",
+    "poster": "https://images.unsplash.com/photo-1508614987459-6f7f3fa5f6ff?auto=format&fit=crop&w=300&q=60"
+  },
+  {
+    "id": "m9",
+    "title": "The Gentle Chef",
+    "year": 2015,
+    "genres": ["Family", "Comedy"],
+    "description": "A kind chef opens a small restaurant that becomes a safe harbor for a town's lost souls and quirky characters.",
+    "poster": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=300&q=60"
+  },
+  {
+    "id": "m10",
+    "title": "Orbit Break",
+    "year": 2021,
+    "genres": ["Action", "Sci-Fi"],
+    "description": "A salvage crew must prevent a damaged orbital station from falling back to Earth while fighting rival scavengers.",
+    "poster": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=300&q=60"
+  }
+]

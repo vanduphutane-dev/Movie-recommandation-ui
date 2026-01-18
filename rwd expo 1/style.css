@@ -1,0 +1,75 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#5eead4;
+  --glass: rgba(255,255,255,0.03);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Roboto,system-ui,-apple-system,"Helvetica Neue",Arial;
+  background:linear-gradient(180deg,#071029 0%, #0b1220 100%);
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+}
+
+header{
+  padding:28px 24px;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+}
+header h1{margin:0 0 6px 0;font-size:22px}
+header p{margin:0;color:var(--muted);font-size:13px}
+
+main{padding:20px;max-width:1100px;margin:0 auto}
+.controls{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:end;
+  margin-bottom:18px;
+}
+.control-item{
+  background:var(--glass);
+  padding:12px;
+  border-radius:8px;
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.control-item.small{padding:8px}
+.control-item label{font-size:13px;color:var(--muted)}
+.control-item input[type="text"], .control-item input[type="number"], .control-item select{
+  background:transparent;border:1px solid rgba(255,255,255,0.06); color:inherit; padding:8px;border-radius:6px; min-width:220px;
+}
+.control-item button{
+  background:var(--accent); color:#042022; border:0; padding:8px 12px;border-radius:6px; cursor:pointer;font-weight:600;
+}
+
+.results h2, .all-movies h2{margin:4px 0 12px 0;font-size:18px}
+.cards-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+  gap:14px;
+}
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:10px;border-radius:10px; display:flex; gap:10px; align-items:flex-start;
+  border:1px solid rgba(255,255,255,0.03);
+}
+.poster{
+  width:80px; height:120px; border-radius:6px; object-fit:cover; flex-shrink:0; background:#091023;
+}
+.card-content{flex:1; min-width:0}
+.card h3{margin:0 0 6px 0;font-size:15px}
+.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.25}
+.genres{margin-top:8px; font-size:12px; color:var(--accent)}
+
+footer{padding:18px 24px; text-align:center; color:var(--muted); font-size:13px; margin-top:20px}
+
+@media (max-width:640px){
+  .controls{flex-direction:column; align-items:stretch}
+  .control-item {width:100%}
+}

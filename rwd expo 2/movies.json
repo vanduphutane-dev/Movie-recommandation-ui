@@ -1,0 +1,92 @@
+[
+ {
+    "id": 1,
+    "title": "Echoes of Tomorrow",
+    "year": 2021,
+    "genres": ["Sci-Fi", "Drama"],
+    "keywords": ["time travel", "future", "memory"],
+    "poster": "https://picsum.photos/seed/echoes/400/600",
+    "desc": "A scientist confronts memories of a future he can't change as timelines converge."
+  },
+  {
+    "id": 2,
+    "title": "Midnight Runaway",
+    "year": 2019,
+    "genres": ["Action", "Thriller"],
+    "keywords": ["chase", "crime", "escape"],
+    "poster": "https://picsum.photos/seed/midnight/400/600",
+    "desc": "An ex-con races across cities to clear his name while pursued by dangerous enemies."
+  },
+  {
+    "id": 3,
+    "title": "The Last Garden",
+    "year": 2020,
+    "genres": ["Drama", "Romance"],
+    "keywords": ["relationships", "loss", "healing"],
+    "poster": "https://picsum.photos/seed/garden/400/600",
+    "desc": "Two neighbors form a fragile friendship around a secret rooftop garden."
+  },
+  {
+    "id": 4,
+    "title": "Stars Beneath Us",
+    "year": 2022,
+    "genres": ["Sci-Fi", "Adventure"],
+    "keywords": ["space", "exploration", "alien"],
+    "poster": "https://picsum.photos/seed/stars/400/600",
+    "desc": "An expedition to a nearby exoplanet reveals more than science bargained for."
+  },
+  {
+    "id": 5,
+    "title": "Quiet Streets",
+    "year": 2018,
+    "genres": ["Crime", "Drama"],
+    "keywords": ["mystery", "investigation", "town"],
+    "poster": "https://picsum.photos/seed/quiet/400/600",
+    "desc": "A detective returns to his hometown to untangle a case that changed him years ago."
+  },
+  {
+    "id": 6,
+    "title": "Neon Nights",
+    "year": 2021,
+    "genres": ["Action", "Sci-Fi"],
+    "keywords": ["cyberpunk", "heist", "technology"],
+    "poster": "https://picsum.photos/seed/neon/400/600",
+    "desc": "In a neon metropolis, a crew pulls off a high-stakes heist that could upend society."
+  },
+  {
+    "id": 7,
+    "title": "A Recipe for Hope",
+    "year": 2020,
+    "genres": ["Comedy", "Drama"],
+    "keywords": ["food", "community", "family"],
+    "poster": "https://picsum.photos/seed/recipe/400/600",
+    "desc": "A chef reopens a neighborhood restaurant and learns that recipes can fix more than hunger."
+  },
+  {
+    "id": 8,
+    "title": "Parallel Lines",
+    "year": 2017,
+    "genres": ["Romance", "Drama"],
+    "keywords": ["alternate reality", "choices", "second chances"],
+    "poster": "https://picsum.photos/seed/parallel/400/600",
+    "desc": "Two lovers experience different lives where small choices have big consequences."
+  },
+  {
+    "id": 9,
+    "title": "Under the Iron Sky",
+    "year": 2015,
+    "genres": ["Historical", "Drama"],
+    "keywords": ["war", "resilience", "sacrifice"],
+    "poster": "https://picsum.photos/seed/iron/400/600",
+    "desc": "Set during a turbulent era, a young family fights to survive and protect their dreams."
+  },
+  {
+    "id": 10,
+    "title": "Code of Silence",
+    "year": 2023,
+    "genres": ["Thriller", "Crime"],
+    "keywords": ["whistleblower", "corruption", "investigation"],
+    "poster": "https://picsum.photos/seed/code/400/600",
+    "desc": "A whistleblower uncovers a network of corruption, risking everything to reveal the truth."
+  }
+]
