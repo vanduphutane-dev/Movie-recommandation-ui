@@ -7,6 +7,37 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="container">
+  <h1>🎬 Movie Recommender</h1>
+  <p class="subtitle">
+    Content-based recommendation using TF-IDF (description + genres)
+  </p>
+
+  <div class="controls">
+    <select id="movieSelect"></select>
+    <button onclick="recommendSimilar()">Recommend Similar</button>
+  </div>
+
+  <div class="controls">
+    <input type="text" id="queryInput" placeholder="e.g. space adventure with aliens">
+    <button onclick="recommendFromQuery()">Recommend</button>
+  </div>
+
+  <div class="controls">
+    <input type="number" id="topN" value="6" min="1">
+  </div>
+
+  <h2 class="section-title">Recommendations</h2>
+  <div id="recommendations" class="movie-list"></div>
+
+  <h2 class="section-title">All Movies</h2>
+  <div id="allMovies" class="movie-list"></div>
+
+  <div class="footer">
+    Simple content-based recommender · Demo project
+  </div>
+</div>
+
   <header>
     <h1>Movie Recommender</h1>
     <p>Pick a movie or search to get recommendations (content-based: description + genres).</p>
@@ -49,4 +80,5 @@
   </footer>
 <script src="script.js"></script>
 </body>
+
 </html>
