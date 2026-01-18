@@ -266,4 +266,27 @@ async function init() {
 init().catch(err => {
   console.error(err);
   document.getElementById('cards').textContent = 'Failed to load movies';
+
 });
+function renderMovies(containerId, movies) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = "";
+
+  if (movies.length === 0) {
+    container.innerHTML = "<p>No results found.</p>";
+    return;
+  }
+
+  movies.forEach(m => {
+    const card = document.createElement("div");
+    card.className = "movie-card";
+
+    card.innerHTML = `
+      <h3>${m.title}</h3>
+      <p><strong>Genres:</strong> ${m.genres}</p>
+      <p>${m.description.slice(0, 120)}...</p>
+    `;
+
+    container.appendChild(card);
+  });
+}
