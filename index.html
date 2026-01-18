@@ -38,43 +38,6 @@
   </div>
 </div>
 
-  <header>
-    <h1>Movie Recommender</h1>
-    <p>Pick a movie or search to get recommendations (content-based: description + genres).</p>
-  </header>
-
-  <main>
-    <section class="controls">
-      <div class="control-item">
-        <label for="movieSelect">Choose a movie:</label>
-        <select id="movieSelect">
-          <option value="">Loading movies...</option>
-        </select>
-        <button id="recommendBtn">Recommend similar</button>
-      </div>
-
-      <div class="control-item">
-        <label for="queryInput">Or type what you like:</label>
-        <input id="queryInput" placeholder="e.g. space adventure with humor" />
-        <button id="queryRecommendBtn">Recommend for query</button>
-      </div>
-<div class="control-item small">
-        <label>Top N:</label>
-        <input id="topN" type="number" value="6" min="1" max="20" />
-      </div>
-    </section>
-
-    <section class="results">
-      <h2 id="resultsTitle">Recommendations</h2>
-      <div id="cards" class="cards-grid"></div>
-    </section>
-
-    <section class="all-movies">
-      <h2>All Movies</h2>
-      <div id="allCards" class="cards-grid"></div>
-    </section>
-  </main>
-
   <footer>
     <small>Simple content-based movie recommender — TF-IDF on descriptions + genre weighting. Demo only.</small>
   </footer>
@@ -82,3 +45,4 @@
 </body>
 
 </html>
+
