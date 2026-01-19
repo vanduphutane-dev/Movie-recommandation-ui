@@ -1,140 +1,133 @@
-// ===============================
-// Global data
-// ===============================
 let movies = [];
+let allGenres = [];
 
-// ===============================
-// Load movies when page loads
-// ===============================
-document.addEventListener("DOMContentLoaded", () => {
-  fetch("movies.json")   // ⚠️ make sure this file exists
-    .then(response => response.json())
-    .then(data => {
-      movies = data;
-      populateDropdown();
-      renderMovies("allMovies", movies);
-    })
-    .catch(error => {
-      console.error("Error loading movies:", error);
-    });
-});
+// Load movies.json when page loads
+fetch("movies.json")
+  .then(res => res.json())
+  .then(data => {
+    movies = data;
+    extractGenres();
+    populateGenreDropdown();
+    showAllMovies();
+  })
+  .catch(err => console.error("Error loading movies:", err));
 
-// ===============================
-// Populate dropdown
-// ===============================
-function populateDropdown() {
+/* -----------------------------
+   GENRE HANDLING
+------------------------------*/
+
+// Extract unique genres from movies
+function extractGenres() {
+  const genreSet = new Set();
+  movies.forEach(movie => {
+    movie.genres.forEach(g => genreSet.add(g));
+  });
+  allGenres = Array.from(genreSet).sort();
+}
+
+// Populate dropdown with genres
+function populateGenreDropdown() {
   const select = document.getElementById("movieSelect");
-  select.innerHTML = "";
+  select.innerHTML = `<option value="">Select a genre</option>`;
 
-  movies.forEach((movie, index) => {
+  allGenres.forEach(genre => {
     const option = document.createElement("option");
-    option.value = index;
-    option.textContent = movie.title;
+    option.value = genre;
+    option.textContent = genre;
     select.appendChild(option);
   });
 }
 
-// ===============================
-// Render movie cards
-// ===============================
-function renderMovies(containerId, movieList) {
-  const container = document.getElementById(containerId);
-  container.innerHTML = "";
+/* -----------------------------
+   RECOMMEND BY GENRE
+------------------------------*/
 
-  if (movieList.length === 0) {
-    container.innerHTML = "<p>No results found.</p>";
+function recommendSimilar() {
+  const selectedGenre = document.getElementById("movieSelect").value;
+  const topN = parseInt(document.getElementById("topN").value) || 6;
+
+  if (!selectedGenre) {
+    alert("Please select a genre");
     return;
   }
 
-  movieList.forEach(movie => {
-    const card = document.createElement("div");
-    card.className = "movie-card";
+  const results = movies.filter(movie =>
+    movie.genres.includes(selectedGenre)
+  );
 
-    card.innerHTML = `
-      <h3>${movie.title}</h3>
-      <p><strong>Genres:</strong> ${movie.genres.join(", ")}</p>
-      <p>${movie.description}</p>
-    `;
-
-    container.appendChild(card);
-  });
+  displayRecommendations(results.slice(0, topN));
 }
 
-// ===============================
-// Recommend similar movies
-// ===============================
-function recommendSimilar() {
-  const index = document.getElementById("movieSelect").value;
-  const topN = parseInt(document.getElementById("topN").value);
+/* -----------------------------
+   RECOMMEND BY TEXT QUERY
+------------------------------*/
 
-  if (!movies[index]) return;
-
-  const selected = movies[index];
-
-  const scored = movies
-    .map(movie => ({
-      movie,
-      score: similarity(selected, movie)
-    }))
-    .filter(item => item.movie !== selected)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, topN)
-    .map(item => item.movie);
-
-  renderMovies("recommendations", scored);
-}
-
-// ===============================
-// Recommend from text query
-// ===============================
 function recommendFromQuery() {
   const query = document.getElementById("queryInput").value.toLowerCase();
-  const topN = parseInt(document.getElementById("topN").value);
+  const topN = parseInt(document.getElementById("topN").value) || 6;
 
-  if (!query) return;
+  if (!query) {
+    alert("Please enter a description or genre keyword");
+    return;
+  }
 
-  const scored = movies
-    .map(movie => ({
-      movie,
-      score: textSimilarity(query, movie)
-    }))
-    .filter(item => item.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, topN)
-    .map(item => item.movie);
+  const scored = movies.map(movie => {
+    let score = 0;
 
-  renderMovies("recommendations", scored);
-}
+    if (movie.description.toLowerCase().includes(query)) score += 2;
 
-// ===============================
-// Similarity functions
-// ===============================
-function similarity(a, b) {
-  let score = 0;
+    movie.genres.forEach(g => {
+      if (query.includes(g.toLowerCase())) score += 1;
+    });
 
-  // genre overlap
-  const commonGenres = a.genres.filter(g => b.genres.includes(g));
-  score += commonGenres.length * 2;
-
-  // description overlap
-  score += textOverlap(a.description, b.description);
-
-  return score;
-}
-
-function textSimilarity(query, movie) {
-  return textOverlap(query, movie.description + " " + movie.genres.join(" "));
-}
-
-function textOverlap(text1, text2) {
-  const words1 = text1.toLowerCase().split(/\W+/);
-  const words2 = text2.toLowerCase().split(/\W+/);
-
-  let count = 0;
-  words1.forEach(word => {
-    if (words2.includes(word)) count++;
+    return { ...movie, score };
   });
 
-  return count;
+  const results = scored
+    .filter(m => m.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, topN);
+
+  displayRecommendations(results);
 }
 
+/* -----------------------------
+   DISPLAY FUNCTIONS
+------------------------------*/
+
+function displayRecommendations(list) {
+  const container = document.getElementById("recommendations");
+  container.innerHTML = "";
+
+  if (list.length === 0) {
+    container.innerHTML = "<p>No recommendations found.</p>";
+    return;
+  }
+
+  list.forEach(movie => {
+    container.appendChild(createMovieCard(movie));
+  });
+}
+
+function showAllMovies() {
+  const container = document.getElementById("allMovies");
+  container.innerHTML = "";
+
+  movies.forEach(movie => {
+    container.appendChild(createMovieCard(movie));
+  });
+}
+
+// Create movie card
+function createMovieCard(movie) {
+  const card = document.createElement("div");
+  card.className = "movie-card";
+
+  card.innerHTML = `
+    <h3>${movie.title}</h3>
+    <p><strong>Genres:</strong> ${movie.genres.join(", ")}</p>
+    <p>${movie.description}</p>
+  `;
+
+  return card;
+}
