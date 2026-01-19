@@ -1,4 +1,9 @@
 /* Reset + base */
+body {
+  background: red !important;
+}
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -139,3 +144,4 @@ footer {
     min-width: 100%;
   }
 }
+
