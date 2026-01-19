@@ -1,81 +1,62 @@
-{
-    "id": "m1",
-    "title": "Starlight Odyssey",
-    "year": 2020,
+[
+  {
+    "title": "Echoes of Tomorrow",
+    "genres": ["Sci-Fi", "Drama"],
+    "description": "A scientist relives the same day repeatedly while trying to prevent a future catastrophe."
+  },
+  {
+    "title": "Midnight Runaway",
+    "genres": ["Action", "Thriller"],
+    "description": "A former cop must protect a key witness while being chased across the city."
+  },
+  {
+    "title": "The Last Garden",
+    "genres": ["Drama", "Romance"],
+    "description": "Two strangers form a deep bond while restoring an abandoned garden."
+  },
+  {
+    "title": "Stars Beneath Us",
     "genres": ["Sci-Fi", "Adventure"],
-    "description": "A crew of explorers travel across galaxies to uncover an ancient signal that could change humanity's fate.",
-    "poster": "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=300&q=60"
+    "description": "Astronauts discover a hidden civilization beneath a distant planet's surface."
   },
   {
-    "id": "m2",
-    "title": "City of Echoes",
-    "year": 2018,
-    "genres": ["Drama", "Mystery"],
-    "description": "When a journalist uncovers a string of small disappearances, she discovers a city with many hidden layers.",
-    "poster": "https://images.unsplash.com/photo-1528747045269-390fe33c19d7?auto=format&fit=crop&w=300&q=60"
+    "title": "Quiet Streets",
+    "genres": ["Crime", "Drama"],
+    "description": "A journalist uncovers corruption lurking beneath a peaceful neighborhood."
   },
   {
-    "id": "m3",
-    "title": "Laugh Track",
-    "year": 2021,
-    "genres": ["Comedy"],
-    "description": "An improvisational comedian navigates sudden fame and the absurdities of modern dating with outrageous sketches.",
-    "poster": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=300&q=60"
-  },
-  {
-    "id": "m4",
-    "title": "Deep Blue",
-    "year": 2019,
-    "genres": ["Documentary"],
-    "description": "An intimate look at the oceans and the delicate balance of marine ecosystems in the face of climate change.",
-    "poster": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=300&q=60"
-  },
-  {
-    "id": "m5",
-    "title": "Neon Samurai",
-    "year": 2022,
+    "title": "Neon Nights",
     "genres": ["Action", "Sci-Fi"],
-    "description": "In a neon metropolis, a former enforcer becomes a blade-for-hire and fights high-tech corporations with ancient code.",
-    "poster": "https://images.unsplash.com/photo-1516910817561-5f0abf1d6a1b?auto=format&fit=crop&w=300&q=60"
+    "description": "In a cyberpunk city, a hacker fights a powerful corporation controlling society."
   },
   {
-    "id": "m6",
-    "title": "Hidden Notes",
-    "year": 2017,
+    "title": "A Recipe for Hope",
+    "genres": ["Comedy", "Drama"],
+    "description": "An aspiring chef rebuilds her life after opening a small restaurant in her hometown."
+  },
+  {
+    "title": "Parallel Lines",
     "genres": ["Romance", "Drama"],
-    "description": "Two musicians from different worlds connect through an old melody that brings up long-forgotten memories.",
-    "poster": "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=300&q=60"
+    "description": "Two lives intersect unexpectedly, changing their futures forever."
   },
   {
-    "id": "m7",
-    "title": "The Last Algorithm",
-    "year": 2023,
-    "genres": ["Sci-Fi", "Thriller"],
-    "description": "When an experiment to optimize society goes awry, one scientist must decide whether to shut down the perfect but dangerous algorithm.",
-    "poster": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=300&q=60"
+    "title": "Laugh Track",
+    "genres": ["Comedy"],
+    "description": "A struggling stand-up comedian navigates friendships, failure, and fame."
   },
   {
-    "id": "m8",
-    "title": "Campfire Tales",
-    "year": 2016,
-    "genres": ["Horror", "Mystery"],
-    "description": "A group of friends at a lakeside retreat tell stories that begin to come true under the moonlight.",
-    "poster": "https://images.unsplash.com/photo-1508614987459-6f7f3fa5f6ff?auto=format&fit=crop&w=300&q=60"
+    "title": "Chasing Shadows",
+    "genres": ["Thriller", "Crime"],
+    "description": "A detective hunts a serial criminal who always stays one step ahead."
   },
   {
-    "id": "m9",
-    "title": "The Gentle Chef",
-    "year": 2015,
-    "genres": ["Family", "Comedy"],
-    "description": "A kind chef opens a small restaurant that becomes a safe harbor for a town's lost souls and quirky characters.",
-    "poster": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=300&q=60"
+    "title": "The Forgotten Trail",
+    "genres": ["Adventure", "Drama"],
+    "description": "A group of friends trek through dangerous terrain to uncover a lost legend."
   },
   {
-    "id": "m10",
-    "title": "Orbit Break",
-    "year": 2021,
-    "genres": ["Action", "Sci-Fi"],
-    "description": "A salvage crew must prevent a damaged orbital station from falling back to Earth while fighting rival scavengers.",
-    "poster": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=300&q=60"
+    "title": "Hearts in Bloom",
+    "genres": ["Romance", "Comedy"],
+    "description": "Opposites attract when two rivals are forced to plan a wedding together."
   }
 ]
